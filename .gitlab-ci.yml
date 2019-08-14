@@ -12,7 +12,7 @@ test1:
   stage: test
   script:
    - npm install
-   - npm run test
+   - npm run test -- --coverage --watchAll=false
 
 deploy:
   stage: deploy

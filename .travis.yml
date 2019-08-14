@@ -6,8 +6,8 @@ services:
 
 #Execute before tests and everything else
 before_install:
+  - gem install bundler
   - docker build -t frontend-travis-ci -f Dockerfile.dev .
 
 script:
-  - ls
-  - docker run frontend-travis-ci node node_modules/react-scripts/scripts/test.js
+  - docker run frontend-travis-ci npm run test -- --coverage

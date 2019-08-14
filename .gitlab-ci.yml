@@ -1,0 +1,20 @@
+image: node:alpine
+
+build:
+  stage: build
+  script:
+   - ls
+   - npm install
+   - npm run build
+   - ls
+
+test1:
+  stage: test
+  script:
+   - npm install
+   - npm run test
+
+deploy:
+  stage: deploy
+  script:
+   - echo "deploy stage"

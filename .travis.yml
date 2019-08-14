@@ -9,4 +9,4 @@ before_install:
   - docker build -t frontend-travis-ci -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true frontend-travis-ci npm run test
+  - docker run frontend-travis-ci npm run test -- --coverage

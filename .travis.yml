@@ -6,7 +6,6 @@ services:
 
 #Execute before tests and everything else
 before_install:
-  - gem install bundler
   - docker build -t frontend-travis-ci -f Dockerfile.dev .
 
 script:
